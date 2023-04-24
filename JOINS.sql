@@ -4,7 +4,8 @@
 
 SELECT l.IDLocalidad, l.Localidad, p.Provincia FROM Localidades l INNER JOIN Provincias p on l.IDProvincia=p.IDProvincia
 
--- 2
+-- 2..
+
 -- Listado que informe el ID de la multa, el monto a abonar y los datos del agente que la realizó. Debe incluir los apellidos y nombres de los agentes. Así como también la fecha de nacimiento y la edad.
 
 SELECT m.IdMulta, m.Monto, a.Apellidos, a.Nombres, a.FechaNacimiento, DATEDIFF(YEAR,0,GETDATE()- CAST(FechaNacimiento as datetime)) Edad FROM Multas m INNER JOIN Agentes a on m.IdAgente=a.IdAgente
